@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fire Emblem Style Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    canvas {
+      border: 2px solid black;
+    }
+    #gameUI {
+      margin-left: 20px;
+    }
+    .stat {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="640" height="640"></canvas>
+  <div id="gameUI">
+    <h2>Character Stats</h2>
+    <div id="stats"></div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
