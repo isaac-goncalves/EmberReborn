@@ -1,0 +1,54 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* A retro, arcade-styled font */
+    background-color: black;
+    color: #00ff00; /* Bright green text */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 0px #ff00ff;
+    margin-bottom: 2rem;
+  }
+  
+  .game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .game-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .game-item:hover {
+    background-color: #00ff00;
+    color: black;
+    transform: scale(1.05);
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  

@@ -3,30 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fire Emblem Style Game</title>
+  <title>Arcade Games</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      background-image: url('./public/images/arcade.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      color: white;
+      text-align: center;
+    }
+    .container {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      backdrop-filter: blur(2px); /* Slight blur to make text readable */
     }
-    canvas {
-      border: 2px solid black;
+    .game-card {
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+      width: 300px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
     }
-    #gameUI {
-      margin-left: 20px;
+    .game-card:hover {
+      background-color: rgba(0, 255, 0, 0.7); /* Hover effect */
+      transform: scale(1.05);
     }
-    .stat {
-      margin-bottom: 10px;
+    h1 {
+      font-size: 3rem;
+      text-shadow: 3px 3px 5px #00ff00;
     }
   </style>
 </head>
 <body>
-  <canvas id="gameCanvas" width="640" height="640"></canvas>
-  <div id="gameUI">
-    <h2>Character Stats</h2>
-    <div id="stats"></div>
+  <div class="container">
+    <header>
+      <h1>?? Welcome to the Arcade! ??</h1>
+    </header>
+
+    <div class="game-card" onclick="startGame('zombieRun')">
+      <h2>?? Zombie Run</h2>
+      <p>Run from the zombies! Can you survive?</p>
+    </div>
+
+    <div class="game-card" onclick="startGame('spaceshipShooter')">
+      <h2>?? Spaceship Shooter</h2>
+      <p>Battle against other spaceships in a real-time WebSocket multiplayer game!</p>
+    </div>
   </div>
 
-  <script src="game.js"></script>
+  <script>
+    function startGame(game) {
+      if (game === 'zombieRun') {
+        window.location.href = './ZombieRun/index.html';
+      } else if (game === 'spaceshipShooter') {
+        window.location.href = '/spaceshipShooter.html';
+      }
+    }
+  </script>
 </body>
 </html>
